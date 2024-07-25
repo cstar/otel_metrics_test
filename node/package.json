@@ -1,0 +1,14 @@
+{
+  "name": "otel-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/exporter-metrics-otlp-http": "^0.52.1",
+    "@opentelemetry/exporter-prometheus": "^0.52.1",
+    "@opentelemetry/sdk-node": "^0.52.1",
+    "@opentelemetry/semantic-conventions": "^1.25.1",
+    "express": "^4.19.2"
+  }
+}

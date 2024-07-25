@@ -1,0 +1,19 @@
+{application, otel_getting_started, [
+    {description, "An OTP application"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {otel_getting_started_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        ssl_verify_fun,
+        tls_certificate_check,
+        opentelemetry_api,
+        opentelemetry_api_experimental,
+        opentelemetry_experimental
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache-2.0"]},
+    {links, []}
+ ]}.

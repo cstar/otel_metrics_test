@@ -1,0 +1,22 @@
+services:
+  otel:
+    image: otel/opentelemetry-collector-contrib:0.105.0
+    command: ['--config=/conf/otel-collector-config.yaml']
+    ports:
+      - 4317:4317
+      - 4318:4318
+      - 9464:9464
+    volumes:
+      - ./otel-collector-config.yaml:/conf/otel-collector-config.yaml
+    links:
+      - jaeger-all-in-one
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - '9090:9090'
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+  jaeger-all-in-one:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - '16686:16686'
