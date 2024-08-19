@@ -8,6 +8,7 @@
         stdlib,
         ssl_verify_fun,
         tls_certificate_check,
+        opentelemetry_exporter,
         opentelemetry_api,
         opentelemetry_api_experimental,
         opentelemetry_experimental
